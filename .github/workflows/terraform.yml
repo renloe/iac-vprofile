@@ -58,6 +58,7 @@ jobs:
         if: steps.plan.outcome == 'failure'
         run: exit 1
 
+      # Apply
       - name: Terraform Apply
         id: apple
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
